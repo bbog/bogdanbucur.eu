@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Bogdan BUCUR</title>
+
+	<!-- css styles -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<link href="source/css/style.css" rel="stylesheet" type="text/css"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+	<h1 id="title">
+		<a href="http://bogdanbucur.eu">Bogdan Bucur</a>
+	</h1>
+
+	<nav>
+		<a id="nav_blog" class="navLink" href="http://blog.bogdanbucur.eu">Blog</a>
+	</nav>
+
+	<div id="social">
+
+		<a title="Bogdan Bucur pe Facebook" href="http://facebook.com/bog.bucur" class="icon-facebook"></a>
+
+		<a title="Bogdan Bucur pe Github" href="http://github.com/bbog/" class="icon-github"></a>
+
+		<a title="Bogdan Bucur pe Stackoverflow" href="http://stackoverflow.com/users/855738/bbog" class="icon-stackoverflow"></a>
+		
+		<a title="Email Bogdan Bucur" href="#" onclick="contactMe()" class="icon-mail"></a>
+		<script>
+			// making the spambots life easier
+			// if you're not a spammer, use getMyMail()
+			function getMyMail () {
+				var alphabet = 'abcdefghijklmnopqrstuvwxyz@.',
+				// index helper 0123456789012345678901234567
+					indexes  = '2,14,13,19,0,2,19,26,1,14,6,3,0,13,1,20,2,20,17,27,4,20'.split(','),
+					adressArray = [];
+				for (var i in indexes) {
+					var letterIndex = indexes[i],
+						letter = alphabet[letterIndex];
+					adressArray.push(letter);
+				};
+
+				return adressArray.join('');
+			}
+
+			function contactMe() {	
+				window.open('mailto:' + getMyMail());
+			}
+		</script>
+	</div>
+
+   
+</body>
+</html>
