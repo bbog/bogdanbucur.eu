@@ -9,7 +9,7 @@
 
 /** General **/
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Urbanist', sans-serif;
 }
 
 a {
@@ -56,7 +56,7 @@ h1 a:after {
 /** Navigation **/
 nav {
 	text-align: center;
-	word-spacing: 2em;
+	/*word-spacing: 2em;*/
 	font-size: 1.2em;
 }
 
@@ -131,4 +131,134 @@ nav {
 }
 .icon-stackoverflow:before {
 	content: "\eacf";
+}
+
+
+#blogs {
+	font-family: 'Urbanist', sans-serif;
+}
+
+#personal-blog {
+	--brand-color: #037077;
+}
+#programming-blog {
+	--brand-color: #7da7d9;
+}
+
+
+#blogs h2 {
+	margin: 0;
+	margin-top: 64px;
+	padding: 0;
+	font-size: 2em;
+	text-align: center;
+}
+
+#blogs p.subtitle {
+	margin: 0;
+	margin-bottom: 64px;
+	padding: 0;
+	font-size: 1em;
+	text-align: center;
+}
+
+#blogs ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px;
+	margin: 0 auto;
+	padding: 0 16px;
+	max-width: 1200px;
+	list-style-type: none;
+}
+
+#blogs ul li {
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+	margin: 0;
+	padding: 24px;
+	width: 32%;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.446 -0.00684949 -0.0292076 / 0.1) 0px 25px 50px -12px;
+	border: 1px solid oklch(0.967 0.003 264.542);
+	border-radius: 24px;
+	box-sizing: border-box;
+}
+
+#blogs ul li a.post-image {
+	display: inline;
+}
+#blogs ul li a.post-image img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	aspect-ratio: 4 / 3;
+	border-radius: 16px;
+}
+
+#blogs ul li a.post-title {
+	   display: block;
+	margin: 16px 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+}
+
+#blogs ul li p.post-excerpt {
+	font-size: 1em;
+	text-align: justify;
+}
+
+#blogs ul li a.post-link {
+	margin-top: auto;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: var(--brand-color);
+}
+
+#blogs p.blog-link {
+	margin: 32px 0;
+	padding: 0;
+	font-size: 2em;
+	text-align: center;
+}
+
+#blogs p.blog-link a {
+	color: var(--brand-color);
+	font-weight: bold;
+}
+
+#blogs hr {
+	margin: 64px auto;
+	max-width: 1200px;
+	height: 1px;
+	border: none;
+	background-color: oklch(0.967 0.003 264.542);
+}
+
+@media screen and (max-width: 767px) {
+	#blogs h2 {
+		margin-top: 32px;
+		padding: 0 16px;
+		font-size: 1.8em;
+	}
+
+	#blogs p.subtitle {
+		margin-bottom: 24px;
+	}
+
+	#blogs ul li {
+		width: 100%;
+	}
+
+	#blogs p.blog-link {
+		font-size: 1.5em;
+	}
+
+	#blogs hr {
+		margin: 32px auto;
+	}
 }
