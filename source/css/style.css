@@ -9,7 +9,7 @@
 
 /** General **/
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Manrope', sans-serif;
 	padding-top: 88px;
 	box-sizing: border-box;
 }
@@ -49,9 +49,18 @@ a:hover {
 }
 
 #about h1 {
-	margin: 0 0 24px;
+	margin: 0 0 16px;
 	font-size: 3em;
+	font-weight: 800;
 	text-align: left;
+}
+
+.about-accent-bar {
+	width: 64px;
+	height: 6px;
+	margin: 0 0 24px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, #037077, #7da7d9);
 }
 
 .about-text p {
@@ -80,6 +89,11 @@ a:hover {
 .about-image {
 	flex-shrink: 0;
 	width: 500px;
+	padding: 5px;
+	background: linear-gradient(135deg, #037077, #7da7d9);
+	border-radius: 28px;
+	box-shadow: oklab(0.446 -0.00684949 -0.0292076 / 0.1) 0px 25px 50px -12px;
+	box-sizing: border-box;
 }
 
 .about-image img {
@@ -89,8 +103,6 @@ a:hover {
 	object-fit: cover;
 	aspect-ratio: 4 / 3;
 	border-radius: 24px;
-	border: 1px solid oklch(0.967 0.003 264.542);
-	box-shadow: oklab(0.446 -0.00684949 -0.0292076 / 0.1) 0px 25px 50px -12px;
 	box-sizing: border-box;
 }
 
@@ -113,6 +125,11 @@ a:hover {
 	#about h1 {
 		font-size: 2.2em;
 		text-align: center;
+	}
+
+	.about-accent-bar {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.about-text p,
@@ -345,7 +362,7 @@ nav {
 
 
 #blogs {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Manrope', sans-serif;
 }
 
 #personal-blog {
