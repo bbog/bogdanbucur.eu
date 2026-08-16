@@ -9,7 +9,7 @@
 
 /** General **/
 body {
-	font-family: 'Urbanist', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	padding-top: 88px;
 	box-sizing: border-box;
 }
@@ -345,7 +345,7 @@ nav {
 
 
 #blogs {
-	font-family: 'Urbanist', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #personal-blog {
