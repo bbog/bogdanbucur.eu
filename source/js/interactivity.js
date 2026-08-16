@@ -1,5 +1,44 @@
 window.onload = function () {
 
+	const navbarToggle = document.getElementById('navbar-toggle');
+	const navbarLinks = document.getElementById('navbar-links');
+
+	const closeNavbar = function () {
+		navbarToggle.setAttribute('aria-expanded', 'false');
+		navbarLinks.classList.remove('is-open');
+	};
+
+	const openNavbar = function () {
+		navbarToggle.setAttribute('aria-expanded', 'true');
+		navbarLinks.classList.add('is-open');
+	};
+
+	navbarToggle.addEventListener('click', function () {
+		const isOpen = navbarToggle.getAttribute('aria-expanded') === 'true';
+		if (isOpen) {
+			closeNavbar();
+		} else {
+			openNavbar();
+		}
+	});
+
+	document.addEventListener('click', function (event) {
+		if (!navbarLinks.classList.contains('is-open')) {
+			return;
+		}
+		if (navbarToggle.contains(event.target) || navbarLinks.contains(event.target)) {
+			return;
+		}
+		closeNavbar();
+	});
+
+	document.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape' && navbarLinks.classList.contains('is-open')) {
+			closeNavbar();
+			navbarToggle.focus();
+		}
+	});
+
 	const writeBlogPostsToWrapper = function (posts, blog_posts_wrapper) {
 
     	posts.forEach(function (post) {
@@ -18,7 +57,7 @@ window.onload = function () {
 
 			blog_posts_wrapper.appendChild(post_li);
 		});
-    }
+    };
 
     const loadBlogPosts = function (options) {
     	const blog_api = new GhostContentAPI({
@@ -33,7 +72,7 @@ window.onload = function () {
 	    		let blog_posts_wrapper = document.getElementById(options.posts_wrapper_id);
 	    		writeBlogPostsToWrapper(posts, blog_posts_wrapper);
 	    	});
-    }
+    };
 
     loadBlogPosts({
     	url: 'https://programming.bogdanbucur.eu',
