@@ -523,3 +523,23 @@ nav {
 		margin: 48px auto;
 	}
 }
+
+/** Footer **/
+#site-footer {
+	margin-top: 96px;
+	padding: 48px 16px 64px;
+	text-align: center;
+}
+
+#site-footer p {
+	margin: 0;
+	font-size: 1rem;
+	color: #585858;
+}
+
+@media screen and (max-width: 767px) {
+	#site-footer {
+		margin-top: 48px;
+		padding: 32px 16px 48px;
+	}
+}
