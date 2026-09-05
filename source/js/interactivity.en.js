@@ -1,5 +1,9 @@
 window.onload = function () {
 
+	const LANG = {
+		'read_more': 'Read more'
+	};
+
 	const navbarToggle = document.getElementById('navbar-toggle');
 	const navbarLinks = document.getElementById('navbar-links');
 
@@ -52,7 +56,7 @@ window.onload = function () {
 				<a href="${post.url}" title="${post.title}" class="post-title">${post.title}</a>
 				<p class="post-excerpt">${post.excerpt}</p>
 				<a href="${post.url}" title="${post.title}" class="post-link">
-					Citește mai mult
+					${LANG.read_more}
 				</a>`;
 
 			blog_posts_wrapper.appendChild(post_li);
@@ -76,13 +80,13 @@ window.onload = function () {
 
     loadBlogPosts({
     	url: 'https://programming.bogdanbucur.eu',
-		key: '6187d16bf483ea08f515e2a155',
+		key: '__GHOST_PROGRAMMING_KEY__',
 		posts_wrapper_id: 'programming_blog_posts'
     });
 
     loadBlogPosts({
     	url: 'https://blog.bogdanbucur.eu',
-		key: '392e92f619bacf597c5cdd2e80',
+		key: '__GHOST_PERSONAL_KEY__',
 		posts_wrapper_id: 'personal_blog_posts'
     });
 };

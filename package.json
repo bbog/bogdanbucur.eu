@@ -1,0 +1,19 @@
+{
+  "name": "bogdanbucur-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build tooling for the localized (en/ro) static site",
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:en": "node scripts/build.js en",
+    "build:eu": "node scripts/build.js en",
+    "build:ro": "node scripts/build.js ro"
+  },
+  "devDependencies": {
+    "csso": "^5.0.5",
+    "terser": "^5.51.2"
+  }
+}
