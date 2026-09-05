@@ -186,6 +186,7 @@ a:hover {
 .navbar-nav {
 	display: flex;
 	align-items: center;
+	gap: 20px;
 }
 
 .navbar-links {
@@ -204,6 +205,34 @@ a:hover {
 
 .navbar-links a:hover {
 	color: var(--color-accent);
+}
+
+.navbar-divider {
+	width: 1px;
+	height: 20px;
+	background: oklch(0.887 0.003 264.542);
+}
+
+.navbar-lang {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	border: 1px solid oklch(0.917 0.003 264.542);
+	font-size: 0.875rem;
+	font-weight: 600;
+	flex-shrink: 0;
+}
+
+.navbar-lang:hover {
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+}
+
+.navbar-lang-flag {
+	font-size: 1.05em;
+	line-height: 1;
 }
 
 .navbar-toggle {
@@ -248,6 +277,15 @@ a:hover {
 
 	.navbar-toggle {
 		display: flex;
+	}
+
+	.navbar-divider {
+		display: none;
+	}
+
+	.navbar-lang {
+		padding: 5px 10px;
+		font-size: 0.8rem;
 	}
 
 	.navbar-links {
